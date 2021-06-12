@@ -1,0 +1,20 @@
+name: 'PushPlus' 
+description: 'send message to push+'
+inputs:
+  token:
+    description: 'push+ token'
+    required: true
+  title:
+    description: 'message title'
+    required: true
+  content:
+    description: 'message content'
+    required: true
+  template:
+    description: 'message template: html/json'
+    required: false
+    default: 'html'
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
