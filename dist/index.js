@@ -113,7 +113,7 @@ async function run() {
         return Post(postData,`http://pushplus.hxtrip.com/send`, {
         'Content-Type': 'application/json',
         'Content-Length': Buffer.byteLength(postData)
-        },'https');
+        },'http');
     } 
     catch (error) {
         console.log(error);
