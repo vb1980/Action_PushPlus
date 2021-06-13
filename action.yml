@@ -16,7 +16,5 @@ inputs:
     default: 'html'
 
 runs:
-  using: 'composite'
-  steps:
-    - run: curl "http://pushplus.hxtrip.com/send" -H "Content-Type: application/json" -d "{\"token\":\"${{ inputs.token }}\",\"title\":\"${{ inputs.title }}\",\"content\":\"${{ inputs.content }}\",\"template\":\"${{ inputs.template }}\"}" -X POST
-      shell: bash
+  using: 'node12'
+  main: 'dist/index.js'
